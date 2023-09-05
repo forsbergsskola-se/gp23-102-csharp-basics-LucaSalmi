@@ -9,6 +9,7 @@
     <projectFile>P7Input/P7Input.csproj</projectFile>
     <projectFile>P8-Boolean/P8-Boolean.csproj</projectFile>
     <projectFile>P8Conversion/P8Conversion.csproj</projectFile>
+    <projectFile>P9Operators/P9Operators.csproj</projectFile>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
@@ -16,8 +17,10 @@
   <component name="ChangeListManager">
     <list default="true" id="55070d30-dcbc-4e34-bb01-3529df66110d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GP23-CSharp-Basics/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GP23-CSharp-Basics/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GP23-CSharp-Basics.sln" beforeDir="false" afterPath="$PROJECT_DIR$/GP23-CSharp-Basics.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P3-Printing-Output/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/P3-Printing-Output/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P5Variables/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/P5Variables/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P6DataTypes/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/P6DataTypes/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P8Conversion/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/P8Conversion/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P9Operators/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/P9Operators/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +71,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected=".NET Project.P8Conversion">
+  <component name="RunManager" selected=".NET Project.P9Operators">
     <configuration name="P2-CodeExecution" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -213,6 +216,24 @@
         <option name="Build" />
       </method>
     </configuration>
+    <configuration name="P9Operators" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/P9Operators/P9Operators.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -227,7 +248,7 @@
       <workItem from="1693894408208" duration="30000" />
       <workItem from="1693894476518" duration="59000" />
       <workItem from="1693894539169" duration="588000" />
-      <workItem from="1693897142689" duration="4368000" />
+      <workItem from="1693897142689" duration="15813000" />
     </task>
     <task id="LOCAL-00001" summary="updated P3 printing">
       <option name="closed" value="true" />
@@ -259,5 +280,24 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="updated P3 printing" />
     <option name="LAST_COMMIT_MESSAGE" value="updated P3 printing" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/P5Variables/Program.cs</url>
+          <line>2</line>
+          <properties documentPath="C:\Forsberg Projects\forsbergsSkola\gp23-102-csharp-basics-LucaSalmi\P5Variables\Program.cs" initialLine="2" containingFunctionPresentation="">
+            <startOffsets>
+              <option value="68" />
+            </startOffsets>
+            <endOffsets>
+              <option value="80" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
