@@ -17,9 +17,9 @@ else
 return;
 
 
-void SetBooleans(int age)
+void SetBooleans(int num)
 {
-    switch (age)
+    switch (num)
     {
         case < 13:
             isChild = true;
