@@ -9,6 +9,7 @@
     <projectFile>P7Input/P7Input.csproj</projectFile>
     <projectFile>P8-Boolean/P8-Boolean.csproj</projectFile>
     <projectFile>P8Conversion/P8Conversion.csproj</projectFile>
+    <projectFile>P9IfElse/P9IfElse.csproj</projectFile>
     <projectFile>P9Operators/P9Operators.csproj</projectFile>
   </component>
   <component name="AutoImportSettings">
@@ -17,10 +18,8 @@
   <component name="ChangeListManager">
     <list default="true" id="55070d30-dcbc-4e34-bb01-3529df66110d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GP23-CSharp-Basics/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GP23-CSharp-Basics/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P5Variables/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/P5Variables/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P6DataTypes/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/P6DataTypes/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GP23-CSharp-Basics.sln" beforeDir="false" afterPath="$PROJECT_DIR$/GP23-CSharp-Basics.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/P8Conversion/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/P8Conversion/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P9Operators/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/P9Operators/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +70,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected=".NET Project.P9Operators">
+  <component name="RunManager" selected=".NET Project.P9IfElse">
     <configuration name="P2-CodeExecution" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -216,6 +215,24 @@
         <option name="Build" />
       </method>
     </configuration>
+    <configuration name="P9IfElse" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/P9IfElse/P9IfElse.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
     <configuration name="P9Operators" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -248,7 +265,7 @@
       <workItem from="1693894408208" duration="30000" />
       <workItem from="1693894476518" duration="59000" />
       <workItem from="1693894539169" duration="588000" />
-      <workItem from="1693897142689" duration="15813000" />
+      <workItem from="1693897142689" duration="18719000" />
     </task>
     <task id="LOCAL-00001" summary="updated P3 printing">
       <option name="closed" value="true" />
