@@ -1,10 +1,23 @@
 ﻿// See https://aka.ms/new-console-template for more information
+
 var isChild = false;
 var isTeenager = false;
 var isAdult = false;
 Console.WriteLine("Write your Age:");
 var ageInput = Console.ReadLine();
 if (int.TryParse(ageInput, out var age))
+{
+    SetBooleans(age);
+}
+else
+{
+    Console.WriteLine("Invalid Input");
+}
+
+return;
+
+
+void SetBooleans(int age)
 {
     switch (age)
     {
@@ -18,9 +31,8 @@ if (int.TryParse(ageInput, out var age))
             isTeenager = true;
             break;
     }
+
     Console.WriteLine($"You are a Child: {isChild}");
     Console.WriteLine($"You are a Teenager: {isTeenager}");
     Console.WriteLine($"You are an Adult: {isAdult}");
 }
-Console.WriteLine("Invalid Input");
-
