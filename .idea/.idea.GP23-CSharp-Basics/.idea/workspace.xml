@@ -18,8 +18,9 @@
   <component name="ChangeListManager">
     <list default="true" id="55070d30-dcbc-4e34-bb01-3529df66110d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GP23-CSharp-Basics/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GP23-CSharp-Basics/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GP23-CSharp-Basics.sln" beforeDir="false" afterPath="$PROJECT_DIR$/GP23-CSharp-Basics.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P8Conversion/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/P8Conversion/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P7Input/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/P7Input/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P9IfElse/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/P9IfElse/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P9Operators/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/P9Operators/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +71,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected=".NET Project.P9IfElse">
+  <component name="RunManager" selected=".NET Project.P9Operators">
     <configuration name="P2-CodeExecution" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -265,7 +266,7 @@
       <workItem from="1693894408208" duration="30000" />
       <workItem from="1693894476518" duration="59000" />
       <workItem from="1693894539169" duration="588000" />
-      <workItem from="1693897142689" duration="18719000" />
+      <workItem from="1693897142689" duration="19390000" />
     </task>
     <task id="LOCAL-00001" summary="updated P3 printing">
       <option name="closed" value="true" />
