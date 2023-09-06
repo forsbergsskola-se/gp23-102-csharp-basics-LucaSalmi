@@ -20,9 +20,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55070d30-dcbc-4e34-bb01-3529df66110d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/P9_1-km-converter/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/P9_1-km-converter/Program.cs" afterDir="false" />
-    </list>
+    <list default="true" id="55070d30-dcbc-4e34-bb01-3529df66110d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -340,7 +338,7 @@
       <workItem from="1693894476518" duration="59000" />
       <workItem from="1693894539169" duration="588000" />
       <workItem from="1693897142689" duration="21389000" />
-      <workItem from="1693984214028" duration="15640000" />
+      <workItem from="1693984214028" duration="17409000" />
     </task>
     <task id="LOCAL-00001" summary="updated P3 printing">
       <option name="closed" value="true" />
