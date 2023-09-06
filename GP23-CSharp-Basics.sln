@@ -22,6 +22,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P9IfElse", "P9IfElse\P9IfEl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P10Random", "P10Random\P10Random.csproj", "{4D9FD271-8D6A-4B50-9BDF-D22DC4A7255F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P9_1-km-converter", "P9_1-km-converter\P9_1-km-converter.csproj", "{9D712D21-BF11-4DD4-971A-176FF495D479}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P11GoTo", "P11GoTo\P11GoTo.csproj", "{D2EC2084-B8BF-402D-AA09-325D8ED9FC94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +76,13 @@ Global
 		{4D9FD271-8D6A-4B50-9BDF-D22DC4A7255F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D9FD271-8D6A-4B50-9BDF-D22DC4A7255F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D9FD271-8D6A-4B50-9BDF-D22DC4A7255F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D712D21-BF11-4DD4-971A-176FF495D479}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D712D21-BF11-4DD4-971A-176FF495D479}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D712D21-BF11-4DD4-971A-176FF495D479}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D712D21-BF11-4DD4-971A-176FF495D479}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2EC2084-B8BF-402D-AA09-325D8ED9FC94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2EC2084-B8BF-402D-AA09-325D8ED9FC94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2EC2084-B8BF-402D-AA09-325D8ED9FC94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2EC2084-B8BF-402D-AA09-325D8ED9FC94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
