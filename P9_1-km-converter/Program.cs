@@ -13,6 +13,7 @@ Console.WriteLine("""
                   7 - multiplication
                   8 - BMI Calculator
                   9 - hypotenuse of a triangle
+                  10 - minutes and seconds
                   """);
 var userInput = Console.ReadLine();
 if (!int.TryParse(userInput, out var userChoice))
@@ -40,6 +41,8 @@ switch (userChoice)
         goto BmiCalculator;
     case 9:
         goto HypotenuseOfTriangle;
+    case 10:
+        goto MinutesAndSeconds;
 }
 
 // km/h to m/s converter
@@ -66,6 +69,7 @@ var seconds = minutes * 60;
 Console.WriteLine($"{minutes} minutes is {seconds} seconds in total");
 goto AppStart;
 
+// Remainder of Division
 reminderOfDivision:
 Console.WriteLine("""
                   Welcome to the reminder of division calculator!
@@ -79,6 +83,7 @@ var dividend = int.Parse(secondInput!);
 Console.WriteLine($"The reminder is {divider % dividend}");
 goto AppStart;
 
+// Area of circle
 AreaOfCircle:
 Console.WriteLine("""
                   Welcome to the area of circle calculator!
@@ -90,6 +95,7 @@ var area = Math.PI * (radius * radius);
 Console.WriteLine($"The area is {area}");
 goto AppStart;
 
+// Negate value
 NegateValue:
 Console.WriteLine("""
                   Welcome to the negation app!
@@ -100,6 +106,7 @@ var value = double.Parse(valueInput!);
 Console.WriteLine($"The negative is {-value}");
 goto AppStart;
 
+// Division
 Division:
 Console.WriteLine("""
                   Welcome to the division calculator!
@@ -113,6 +120,7 @@ var divisionValue2 = double.Parse(divisionInput2!);
 Console.WriteLine($"The result is {divisionValue1 / divisionValue2}");
 goto AppStart;
 
+// Multiplication
 Multiplication:
 Console.WriteLine("""
                   Welcome to the multiplication calculator!
@@ -126,6 +134,7 @@ var multiplicationValue2 = int.Parse(multiplicationInput2!);
 Console.WriteLine($"The result is {multiplicationValue1 * multiplicationValue2}");
 goto AppStart;
 
+//BMI calculator
 BmiCalculator:
 Console.WriteLine("""
                   Welcome to the BMI calculator!
@@ -140,6 +149,7 @@ var bmi = (weight / (height * height)) * 10000;
 Console.WriteLine($"Your BMI is: {bmi:F1}");
 goto AppStart;
 
+// Hypotenuse of Triangle
 HypotenuseOfTriangle:
 Console.WriteLine("""
                   Welcome to the multiplication calculator!
@@ -152,4 +162,17 @@ var firstSideValue = double.Parse(firstSideInput!);
 var secondSideValue = double.Parse(secondSideInput!);
 var hypotenuse = (firstSideValue * firstSideValue) + (secondSideValue * secondSideValue);
 Console.WriteLine($"The hypotenuse is {Math.Sqrt(hypotenuse)}");
+goto AppStart;
+
+// Minutes and remaining seconds
+MinutesAndSeconds:
+Console.WriteLine("""
+                  Welcome to the minutes and seconds calculator!
+                  Enter an amount of seconds:
+                  """);
+var totalSecondsInput = Console.ReadLine();
+var totalSecondsValue = int.Parse(totalSecondsInput!);
+var minutesValue = totalSecondsValue / 60;
+var remainingSecondsValue = totalSecondsValue % 60;
+Console.WriteLine($"The value corresponds to {minutesValue} minutes and {remainingSecondsValue} seconds");
 goto AppStart;
