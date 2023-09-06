@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P9_1-km-converter", "P9_1-k
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P11GoTo", "P11GoTo\P11GoTo.csproj", "{D2EC2084-B8BF-402D-AA09-325D8ED9FC94}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Battleship", "Battleship\Battleship.csproj", "{3F4F416A-78B9-48F5-A413-1B879D0C1C6D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,5 +86,9 @@ Global
 		{D2EC2084-B8BF-402D-AA09-325D8ED9FC94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2EC2084-B8BF-402D-AA09-325D8ED9FC94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2EC2084-B8BF-402D-AA09-325D8ED9FC94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F4F416A-78B9-48F5-A413-1B879D0C1C6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F4F416A-78B9-48F5-A413-1B879D0C1C6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F4F416A-78B9-48F5-A413-1B879D0C1C6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F4F416A-78B9-48F5-A413-1B879D0C1C6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
