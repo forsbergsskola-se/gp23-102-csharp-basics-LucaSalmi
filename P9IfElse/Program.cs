@@ -10,22 +10,31 @@ if (int.TryParse(ageInput, out var age))
         case < 13:
             Console.WriteLine($"You are a Child");
             break;
-        case > 19:
-            Console.WriteLine($"You are an Adult");
-            break;
-        default:
+        case < 19:
             Console.WriteLine($"You are a Teenager");
             break;
+        default:
+            Console.WriteLine($"You are an Adult");
+            break;
     }
-    
+
     Console.WriteLine("Give me another number");
     var secondInput = Console.ReadLine()!;
     if (int.TryParse(secondInput, out var secondValue))
     {
-        Console.WriteLine(secondValue > age
-            ? "This number is higher then your age"
-            : "This number is lower then your age");
-        
+        if (secondValue < age)
+        {
+            Console.WriteLine("This number is lower then your age");
+        }
+        else if (secondValue > age)
+        {
+            Console.WriteLine("This number is higher then your age");
+        }
+        else
+        {
+            Console.WriteLine("This number is the same as your age");
+        }
+
         Console.WriteLine(secondValue % 2 == 1
             ? "The number is odd"
             : "The number is even");
