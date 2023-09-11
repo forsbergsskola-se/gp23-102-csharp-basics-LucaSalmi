@@ -85,8 +85,8 @@ Console.WriteLine("""
                   Welcome to the area of circle calculator!
                   Enter the radius of the circle:
                   """);
-var radius = double.Parse(Console.ReadLine()!);
-var area = Math.PI * (radius * radius);
+var radius = float.Parse(Console.ReadLine()!);
+var area = float.Pi * MathF.Pow(radius,2);
 Console.WriteLine($"The area is {area}");
 goto AppStart;
 
@@ -106,9 +106,9 @@ Console.WriteLine("""
                   Welcome to the division calculator!
                   Enter the first value:
                   """);
-var divisionValue1 = double.Parse(Console.ReadLine()!);
+var divisionValue1 = float.Parse(Console.ReadLine()!);
 Console.WriteLine("Enter another value");
-var divisionValue2 = double.Parse(Console.ReadLine()!);
+var divisionValue2 = float.Parse(Console.ReadLine()!);
 Console.WriteLine($"The result is {divisionValue1 / divisionValue2}");
 goto AppStart;
 
@@ -133,7 +133,7 @@ Console.WriteLine("""
 var height = double.Parse(Console.ReadLine()!);
 Console.WriteLine("Enter your weight in kg");
 var weight = double.Parse(Console.ReadLine()!);
-var bmi = (weight / (height * height)) * 10000;
+var bmi = (weight / Math.Pow(height,2));
 Console.WriteLine($"Your BMI is: {bmi:F1}");
 goto AppStart;
 
@@ -143,11 +143,11 @@ Console.WriteLine("""
                   Welcome to the multiplication calculator!
                   Enter the length of the first side:
                   """);
-var firstSideValue = double.Parse(Console.ReadLine()!);
+var firstSideValue = float.Parse(Console.ReadLine()!);
 Console.WriteLine("Enter the length of the second side");
-var secondSideValue = double.Parse(Console.ReadLine()!);
-var hypotenuse = (firstSideValue * firstSideValue) + (secondSideValue * secondSideValue);
-Console.WriteLine($"The hypotenuse is {Math.Sqrt(hypotenuse)}");
+var secondSideValue = float.Parse(Console.ReadLine()!);
+var hypotenuse = MathF.Pow(firstSideValue,2) + MathF.Pow(secondSideValue,2);
+Console.WriteLine($"The hypotenuse is {MathF.Sqrt(hypotenuse)}");
 goto AppStart;
 
 // Minutes and remaining seconds

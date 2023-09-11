@@ -24,9 +24,9 @@
   <component name="ChangeListManager">
     <list default="true" id="55070d30-dcbc-4e34-bb01-3529df66110d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GP23-CSharp-Basics/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GP23-CSharp-Basics/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GP23-CSharp-Basics.sln" beforeDir="false" afterPath="$PROJECT_DIR$/GP23-CSharp-Basics.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P8-Boolean/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/P8-Boolean/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameOfNim/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameOfNim/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/P9IfElse/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/P9IfElse/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P9_1-km-converter/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/P9_1-km-converter/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +77,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected=".NET Project.BonusExercises">
+  <component name="RunManager" selected=".NET Project.GameOfNim">
     <configuration name="Battleship" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -383,6 +383,7 @@
       <workItem from="1693897142689" duration="21389000" />
       <workItem from="1693984214028" duration="17409000" />
       <workItem from="1694069428550" duration="19416000" />
+      <workItem from="1694414948506" duration="7350000" />
     </task>
     <task id="LOCAL-00001" summary="updated P3 printing">
       <option name="closed" value="true" />
