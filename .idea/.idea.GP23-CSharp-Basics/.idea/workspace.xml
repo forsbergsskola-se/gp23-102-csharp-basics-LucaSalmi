@@ -25,7 +25,7 @@
   <component name="ChangeListManager">
     <list default="true" id="55070d30-dcbc-4e34-bb01-3529df66110d" name="Changes" comment="renamed P9Operators">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GP23-CSharp-Basics/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GP23-CSharp-Basics/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P9-Operators/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/P9-Operators/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P9IfElse/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/P9IfElse/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -423,7 +423,7 @@
       <workItem from="1694069428550" duration="19416000" />
       <workItem from="1694414948506" duration="13060000" />
       <workItem from="1694496854097" duration="2466000" />
-      <workItem from="1694501902324" duration="1794000" />
+      <workItem from="1694501902324" duration="2540000" />
     </task>
     <task id="LOCAL-00001" summary="updated P3 printing">
       <option name="closed" value="true" />

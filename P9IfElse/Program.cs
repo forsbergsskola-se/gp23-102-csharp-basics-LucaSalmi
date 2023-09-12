@@ -11,11 +11,14 @@ if (int.TryParse(ageInput, out var age))
     var secondInput = Console.ReadLine()!;
     if (int.TryParse(secondInput, out var secondValue))
     {
-        string biggerOrMessage = secondValue < age ? "This number is lower then your age" :
-            secondValue > age ? "This number is higher then your age" : "This number is the same as your age";
-        Console.WriteLine(biggerOrMessage);
-
-        Console.WriteLine(secondValue % 2 == 1
+        var maxNumber = secondValue < age ? age : secondValue;
+        Console.WriteLine($"The maximum is {maxNumber}");
+        /*
+         string biggerOrMessage = secondValue < age ? "This number is lower then your age" :
+         secondValue > age ? "This number is higher then your age" : "This number is the same as your age";
+         Console.WriteLine(biggerOrMessage);
+         */
+        Console.WriteLine(maxNumber % 2 == 1
             ? "The number is odd"
             : "The number is even");
     }
