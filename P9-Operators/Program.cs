@@ -14,6 +14,7 @@ Console.WriteLine("""
                   8 - BMI Calculator
                   9 - hypotenuse of a triangle
                   10 - minutes and seconds
+                  11 - Time Calculator
                   """);
 var userInput = Console.ReadLine();
 if (!int.TryParse(userInput, out var userChoice))
@@ -43,6 +44,8 @@ switch (userChoice)
         goto HypotenuseOfTriangle;
     case 10:
         goto MinutesAndSeconds;
+    case 11:
+        goto TimeCalculator;
 }
 
 // km/h to m/s converter
@@ -86,7 +89,7 @@ Console.WriteLine("""
                   Enter the radius of the circle:
                   """);
 var radius = float.Parse(Console.ReadLine()!);
-var area = float.Pi * MathF.Pow(radius,2);
+var area = float.Pi * MathF.Pow(radius, 2);
 Console.WriteLine($"The area is {area}");
 goto AppStart;
 
@@ -133,7 +136,7 @@ Console.WriteLine("""
 var height = double.Parse(Console.ReadLine()!);
 Console.WriteLine("Enter your weight in kg");
 var weight = double.Parse(Console.ReadLine()!);
-var bmi = (weight / Math.Pow(height,2));
+var bmi = (weight / Math.Pow(height, 2));
 Console.WriteLine($"Your BMI is: {bmi:F1}");
 goto AppStart;
 
@@ -146,7 +149,7 @@ Console.WriteLine("""
 var firstSideValue = float.Parse(Console.ReadLine()!);
 Console.WriteLine("Enter the length of the second side");
 var secondSideValue = float.Parse(Console.ReadLine()!);
-var hypotenuse = MathF.Pow(firstSideValue,2) + MathF.Pow(secondSideValue,2);
+var hypotenuse = MathF.Pow(firstSideValue, 2) + MathF.Pow(secondSideValue, 2);
 Console.WriteLine($"The hypotenuse is {MathF.Sqrt(hypotenuse)}");
 goto AppStart;
 
@@ -160,4 +163,29 @@ var totalSecondsValue = int.Parse(Console.ReadLine()!);
 var minutesValue = totalSecondsValue / 60;
 var remainingSecondsValue = totalSecondsValue % 60;
 Console.WriteLine($"The value corresponds to {minutesValue} minutes and {remainingSecondsValue} seconds");
+goto AppStart;
+
+TimeCalculator:
+Console.WriteLine("Write an amount of seconds:");
+var secondsInput = Console.ReadLine();
+if (int.TryParse(secondsInput, out var totalSeconds))
+{
+    var hoursTotal = (totalSeconds / 3600); // TOT / by number of seconds in a day
+    var days = hoursTotal / 24;
+    hoursTotal -= (24 * days);
+    var minutesTotal =
+        (totalSeconds % 3600) / 60; // (TOT reminder of number of seconds in a day) / number of minutes in an hour
+    var secondsTotal = totalSeconds % (minutesTotal * 60); // TOT % (minutes * seconds in a minute)
+    var daysFraction =
+        (float)totalSeconds / (24 * 3600); // TOT / (hours in a day * seconds in a day) Float for precision
+
+    Console.WriteLine($"""
+                       seconds: {secondsTotal}
+                       minutes: {minutesTotal},
+                       hours: {hoursTotal},
+                       days: {days},
+                       """);
+    Console.WriteLine($"{days}.{hoursTotal}:{minutesTotal}:{secondsTotal}");
+    Console.WriteLine($"In total it's {daysFraction} days");
+}
 goto AppStart;
