@@ -16,7 +16,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P7Input", "P7Input\P7Input.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P8Conversion", "P8Conversion\P8Conversion.csproj", "{4A75A28A-A62F-4EA2-A646-2336AA08DD66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P9Operators", "P9Operators\P9Operators.csproj", "{D0E04762-E837-4CF0-A793-C2C08DFE64AC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P9-Operators-Extra", "P9-Operators-Extra\P9-Operators-Extra.csproj", "{D0E04762-E837-4CF0-A793-C2C08DFE64AC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P9IfElse", "P9IfElse\P9IfElse.csproj", "{81B87C17-2A46-433C-8371-1771FB373739}"
 EndProject
