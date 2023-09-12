@@ -1,20 +1,35 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 var numberOfMatches = 24;
-var isPlayerTurn = true;
-bool isHardDifficulty;
+var isPlayerOneTurn = true;
+bool isHardDifficulty = false;
+var isTwoPlayer = false;
 var rng = new Random();
 
 GameSetup:
 Console.WriteLine("""
                   Welcome to the game of Nim
-                  Choose a difficulty level:
+                  Choose the mode:
                   1 - Easy
                   2 - Hard
+                  3 - Two Players
                   """);
-if (int.TryParse(Console.ReadLine(), out var difficultySelection) && difficultySelection is <= 2 and >= 1)
+if (int.TryParse(Console.ReadLine(), out var selectedMode))
 {
-    isHardDifficulty = difficultySelection is 2;
+    switch (selectedMode)
+    {
+        case 1:
+            break;
+        case 2:
+            isHardDifficulty = true;
+            break;
+        case 3:
+            isTwoPlayer = true;
+            break;
+        default:
+            Console.WriteLine("Invalid Input");
+            goto GameSetup;
+    }
 }
 else
 {
@@ -25,7 +40,7 @@ else
 GameStart:
 var matchesToShow = Enumerable.Repeat('|', numberOfMatches).ToList();
 Console.WriteLine($"{string.Join(separator: "", values: matchesToShow)} ({numberOfMatches})");
-if (isPlayerTurn)
+if (isPlayerOneTurn || isTwoPlayer)
 {
     goto PlayerTurn;
 }
@@ -36,7 +51,7 @@ Console.WriteLine("AI's turn");
 var aiDraw = 0;
 if (isHardDifficulty)
 {
-    for (int i = 1; i <= 3; i++)
+    for (var i = 1; i <= 3; i++)
     {
         if ((numberOfMatches - i) % 4 <= 1)
         {
@@ -47,20 +62,24 @@ if (isHardDifficulty)
 }
 else
 {
-   aiDraw = rng.Next(1, 4);
+    aiDraw = rng.Next(1, 4);
 }
 
 if (aiDraw == 0)
 {
     aiDraw = 1;
 }
+
 numberOfMatches -= aiDraw;
-Console.WriteLine($"the AI draws {aiDraw} matches");
+Console.WriteLine($"the AI draws {aiDraw} {(numberOfMatches > 1 ? "matches" : "match")}");
 goto CheckVictory;
 
 
 PlayerTurn:
-Console.WriteLine("How many matches do you want to draw?");
+Console.WriteLine(isTwoPlayer
+    ? $"How many matches do {(isPlayerOneTurn ? "Player One" : "Player two")} want to draw?"
+    : "How many matches do you want to draw?");
+
 if (!int.TryParse(Console.ReadLine(), out var playerDraw) || playerDraw > 3 || playerDraw < 0)
 {
     Console.WriteLine("Invalid Input");
@@ -68,16 +87,23 @@ if (!int.TryParse(Console.ReadLine(), out var playerDraw) || playerDraw > 3 || p
 }
 
 numberOfMatches -= playerDraw;
-Console.WriteLine($"You drew {playerDraw} matches");
+Console.WriteLine($"You drew {playerDraw} {(numberOfMatches > 1 ? "matches" : "match")}");
 
 
 CheckVictory:
-if (numberOfMatches <= 1)
+if (numberOfMatches <= 0)
 {
-    Console.WriteLine(isPlayerTurn ? "You Won!!" : "You Lost");
+    if (isTwoPlayer)
+    {
+        Console.WriteLine(isPlayerOneTurn ? "Player Two Won" : "Player One Won");
+    }
+    else
+    {
+        Console.WriteLine(isPlayerOneTurn ? "You Lost!!" : "You Won");
+    }
 }
 else
 {
-    isPlayerTurn = !isPlayerTurn;
+    isPlayerOneTurn = !isPlayerOneTurn;
     goto GameStart;
 }
