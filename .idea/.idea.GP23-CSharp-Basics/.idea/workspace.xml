@@ -25,8 +25,6 @@
   <component name="ChangeListManager">
     <list default="true" id="55070d30-dcbc-4e34-bb01-3529df66110d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GP23-CSharp-Basics/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GP23-CSharp-Basics/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Battleship/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GP23-CSharp-Basics.sln" beforeDir="false" afterPath="$PROJECT_DIR$/GP23-CSharp-Basics.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +75,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected=".NET Project.P11_1-5">
+  <component name="RunManager" selected=".NET Project.P9Operators">
     <configuration name="Battleship" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -374,7 +372,7 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/P9_1-km-converter/P9_1-km-converter.csproj" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/P9-Operators/P9-Operators.csproj" />
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
@@ -403,6 +401,7 @@
       <workItem from="1694069428550" duration="19416000" />
       <workItem from="1694414948506" duration="13060000" />
       <workItem from="1694496854097" duration="2466000" />
+      <workItem from="1694501902324" duration="957000" />
     </task>
     <task id="LOCAL-00001" summary="updated P3 printing">
       <option name="closed" value="true" />
