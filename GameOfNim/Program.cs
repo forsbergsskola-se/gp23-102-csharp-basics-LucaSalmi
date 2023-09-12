@@ -4,7 +4,6 @@ var numberOfMatches = 24;
 var isPlayerOneTurn = true;
 bool isHardDifficulty = false;
 var isTwoPlayer = false;
-var rng = new Random();
 
 GameSetup:
 Console.WriteLine("""
@@ -62,7 +61,7 @@ if (isHardDifficulty)
 }
 else
 {
-    aiDraw = rng.Next(1, 4);
+    aiDraw = Random.Shared.Next(1, 4);
 }
 
 if (aiDraw == 0)
