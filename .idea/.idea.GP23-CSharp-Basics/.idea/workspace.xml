@@ -28,8 +28,7 @@
   <component name="ChangeListManager">
     <list default="true" id="55070d30-dcbc-4e34-bb01-3529df66110d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GP23-CSharp-Basics/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GP23-CSharp-Basics/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GP23-CSharp-Basics.sln" beforeDir="false" afterPath="$PROJECT_DIR$/GP23-CSharp-Basics.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameOfNim/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameOfNim/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battleship/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +88,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected=".NET Project.P13_3_Pattern">
+  <component name="RunManager" selected=".NET Project.Battleship">
     <configuration name="Battleship" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -493,7 +492,7 @@
       <workItem from="1694496854097" duration="2466000" />
       <workItem from="1694501902324" duration="19070000" />
       <workItem from="1694674162023" duration="1630000" />
-      <workItem from="1694676749658" duration="2300000" />
+      <workItem from="1694676749658" duration="13384000" />
     </task>
     <task id="LOCAL-00001" summary="updated P3 printing">
       <option name="closed" value="true" />
@@ -559,6 +558,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Battleship/Program.cs</url>
+          <line>73</line>
+          <properties documentPath="C:\Forsberg Projects\forsbergsSkola\gp23-102-csharp-basics-LucaSalmi\Battleship\Program.cs" initialLine="73" containingFunctionPresentation="Method 'PlaceShip'">
+            <startOffsets>
+              <option value="2820" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2843" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
