@@ -15,15 +15,17 @@ class Battleship
             { 'g', 7 },
             { 'h', 8 },
             { 'i', 9 },
-            { 'j', 10 }
         };
 
     static void Main(string[] args)
     {
         SetupBoard();
-        Console.WriteLine($"{Ships.EnemyShipsPosition.First().x} {Ships.EnemyShipsPosition.First().y}");
+        GameLoop:        
         PlayerAttack();
-        PrintMap();
+        PrintMap(false);
+        AiAttack();
+        PrintMap(true);
+        goto GameLoop;
     }
 
     static void PlayerAttack()
@@ -31,26 +33,58 @@ class Battleship
         Console.WriteLine("where do you want to attack?");
         var attackCoordinates = Console.ReadLine()!.ToCharArray();
         int row = Coordinate[attackCoordinates.First()];
-        int col = Coordinate.Values.ElementAt((int)char.GetNumericValue(attackCoordinates[1]));
-        var hasHit = Ships.EnemyShipsPosition.Any(enemyPosition => enemyPosition.x == row && enemyPosition.y == col);
+        int col = Coordinate.Values.ElementAt((int)char.GetNumericValue(attackCoordinates[1])-1);
+        var lastAttackPosition = new Position();
+        lastAttackPosition.x = row;
+        lastAttackPosition.y = col;
+        var hasHit = Ships.EnemyShipsPosition.Any(enemyPosition =>
+            enemyPosition.x == lastAttackPosition.x && enemyPosition.y == lastAttackPosition.y);
         Console.WriteLine(hasHit ? "HIT" : "WATER");
-        
+        if (!hasHit)
+        {
+            Ships.PlayerFirePositions.Add(lastAttackPosition);
+        }
+        else
+        {
+            Ships.EnemyShipsPosition
+                .First(position => position.x == lastAttackPosition.x && position.y == lastAttackPosition.y).isHit = true;
+        }
+    }
+
+    static void AiAttack()
+    {
+        Console.WriteLine("Ai turn");
+        var attackCoordinates = new Position();
+        attackCoordinates.x = Random.Shared.Next(1, 10);
+        attackCoordinates.y = Random.Shared.Next(1, 10);
+        var hasHit = Ships.PlayerShipsPosition.Any(playerPosition =>
+            playerPosition.x == attackCoordinates.x && playerPosition.y == attackCoordinates.y);
+        Console.WriteLine(hasHit ? "ai HIT" : " ai WATER");
+        if (!hasHit)
+        {
+            Ships.EnemyFirePositions.Add(attackCoordinates);
+        }
+        else
+        {
+            Ships.PlayerShipsPosition
+                .First(position => position.x == attackCoordinates.x && position.y == attackCoordinates.y).isHit = true;
+        }
     }
 
     static void SetupBoard()
     {
         Console.WriteLine("Welcome to Battleship");
-        Battleship.PrintMap();
-        Ships.AllShipsPosition.AddRange(PlaceShip(5));
-        Battleship.PrintMap();
-        Ships.AllShipsPosition.AddRange(PlaceShip(4));
-        Battleship.PrintMap();
-        Ships.AllShipsPosition.AddRange(PlaceShip(3));
-        Battleship.PrintMap();
-        Ships.AllShipsPosition.AddRange(PlaceShip(2));
-        Battleship.PrintMap();
-        Ships.AllShipsPosition.AddRange(PlaceShip(2));
-        Battleship.PrintMap();
+        Battleship.PrintMap(true);
+        Ships.PlayerShipsPosition.AddRange(PlaceShip(5));
+        Battleship.PrintMap(true);
+        Ships.PlayerShipsPosition.AddRange(PlaceShip(4));
+        Battleship.PrintMap(true);
+        Ships.PlayerShipsPosition.AddRange(PlaceShip(3));
+        Battleship.PrintMap(true);
+        Ships.PlayerShipsPosition.AddRange(PlaceShip(2));
+        Battleship.PrintMap(true);
+        Ships.PlayerShipsPosition.AddRange(PlaceShip(2));
+        Battleship.PrintMap(true);
         Ships.EnemyShipsPosition.AddRange(Ships.GeneratePositionRandomly(5));
         Ships.EnemyShipsPosition.AddRange(Ships.GeneratePositionRandomly(4));
         Ships.EnemyShipsPosition.AddRange(Ships.GeneratePositionRandomly(3));
@@ -70,7 +104,7 @@ class Battleship
 
         int direction = shipAlignment.First() == 'y' ? 0 : 1;
         int row = Coordinate[position.First()];
-        int col = Coordinate.Values.ElementAt((int)char.GetNumericValue(position[1])-1);
+        int col = Coordinate.Values.ElementAt((int)char.GetNumericValue(position[1]) - 1);
 
 
         if (direction % 2 != 0)
@@ -121,7 +155,7 @@ class Battleship
         }
 
         foreach (var newPosition in from newPosition in positions
-                 from existingPosition in Ships.AllShipsPosition.Where(existingPosition =>
+                 from existingPosition in Ships.PlayerShipsPosition.Where(existingPosition =>
                      existingPosition.x == newPosition.x && existingPosition.y == newPosition.y)
                  select newPosition)
         {
@@ -132,19 +166,30 @@ class Battleship
         return positions;
     }
 
-    static void PrintMap()
+    static void PrintMap(bool isPlayerMap)
     {
-        PrintHeader();
+        
+        Console.ForegroundColor = isPlayerMap ? ConsoleColor.DarkYellow : ConsoleColor.DarkCyan;
+        Console.Write("[ ]");
+        for (int i = 1; i < 10; i++)
+            Console.Write("[" + i + "]");
+        
         Console.WriteLine();
-        List<Position> sortedShipsPositions = Ships.AllShipsPosition.OrderBy(horizontal => horizontal.x)
+        List<Position> sortedPlayerShipsPositions = Ships.PlayerShipsPosition.OrderBy(horizontal => horizontal.x)
             .ThenBy(vertical => vertical.y).ToList();
 
+        List<Position> sortedEnemyShipsPositions = Ships.EnemyShipsPosition.OrderBy(horizontal => horizontal.x)
+            .ThenBy(vertical => vertical.y).ToList();
+
+        var sortedListToUse = isPlayerMap ? sortedPlayerShipsPositions : sortedEnemyShipsPositions;
+
         var row = 'A';
+        var columnMax = 10;
         try
         {
-            for (var x = 1; x < 11; x++)
+            for (var x = 1; x < columnMax; x++)
             {
-                for (var y = 1; y < 11; y++)
+                for (var y = 1; y < columnMax; y++)
                 {
                     var keepGoing = true;
 
@@ -155,8 +200,8 @@ class Battleship
                         row++;
                     }
 
-                    if (Ships.AllShipsPosition.Count != 0 &&
-                        Ships.AllShipsPosition.Exists(shipPos => shipPos.x == x && shipPos.y == y && shipPos.isHit))
+                    if (sortedListToUse.Count != 0 &&
+                        sortedListToUse.Exists(shipPos => shipPos.x == x && shipPos.y == y && shipPos.isHit))
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.Write("[X]");
@@ -165,8 +210,8 @@ class Battleship
                     }
 
 
-                    if (keepGoing && sortedShipsPositions.Count != 0 &&
-                        Ships.AllShipsPosition.Exists(shipPos => shipPos.x == x && shipPos.y == y))
+                    if (keepGoing && sortedListToUse.Count != 0 &&
+                        sortedListToUse.Exists(shipPos => shipPos.x == x && shipPos.y == y))
 
                     {
                         Console.ForegroundColor = ConsoleColor.DarkGreen;
@@ -176,11 +221,19 @@ class Battleship
 
                     if (keepGoing)
                     {
-                        Console.ForegroundColor = ConsoleColor.Blue;
-                        Console.Write("[~]");
+                        var firePositionsToUse = isPlayerMap ? Ships.EnemyFirePositions : Ships.PlayerFirePositions;
+                        if (firePositionsToUse.Exists(firePos => firePos.x == x && firePos.y == y))
+                        {
+                            Console.ForegroundColor = ConsoleColor.Magenta;
+                            Console.Write("[+]");
+                        }
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.Blue;
+                            Console.Write("[~]");
+                        }
                     }
                 }
-
                 Console.WriteLine();
             }
         }
@@ -188,14 +241,6 @@ class Battleship
         {
             string error = e.Message.ToString();
         }
-    }
-
-    static void PrintHeader()
-    {
-        Console.ForegroundColor = ConsoleColor.DarkYellow;
-        Console.Write("[ ]");
-        for (int i = 1; i < 11; i++)
-            Console.Write("[" + i + "]");
     }
 }
 
@@ -209,9 +254,10 @@ class Position
 
 class Ships
 {
-    public static List<Position> AllShipsPosition { get; set; } = new List<Position>();
+    public static List<Position> PlayerShipsPosition { get; set; } = new List<Position>();
     public static List<Position> EnemyShipsPosition { get; set; } = new List<Position>();
-    public List<Position> FirePositions { get; set; } = new List<Position>();
+    public static List<Position> PlayerFirePositions { get; set; } = new List<Position>();
+    public static List<Position> EnemyFirePositions { get; set; } = new List<Position>();
 
     public static List<Position> GeneratePositionRandomly(int size)
     {
@@ -219,8 +265,8 @@ class Ships
 
         int direction = Random.Shared.Next(1, size); //odd for horizontal and even for vertical
         //pick row and column
-        int row = Random.Shared.Next(1, 11);
-        int col = Random.Shared.Next(1, 11);
+        int row = Random.Shared.Next(1, 10);
+        int col = Random.Shared.Next(1, 10);
 
         if (direction % 2 != 0)
         {

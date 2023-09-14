@@ -492,7 +492,7 @@
       <workItem from="1694496854097" duration="2466000" />
       <workItem from="1694501902324" duration="19070000" />
       <workItem from="1694674162023" duration="1630000" />
-      <workItem from="1694676749658" duration="13384000" />
+      <workItem from="1694676749658" duration="17869000" />
     </task>
     <task id="LOCAL-00001" summary="updated P3 printing">
       <option name="closed" value="true" />
@@ -558,19 +558,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Battleship/Program.cs</url>
-          <line>73</line>
-          <properties documentPath="C:\Forsberg Projects\forsbergsSkola\gp23-102-csharp-basics-LucaSalmi\Battleship\Program.cs" initialLine="73" containingFunctionPresentation="Method 'PlaceShip'">
-            <startOffsets>
-              <option value="2820" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2843" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
