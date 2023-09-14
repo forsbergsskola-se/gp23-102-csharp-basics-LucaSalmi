@@ -13,32 +13,32 @@ Console.WriteLine("""
                   2 - Hard
                   3 - Two Players
                   """);
-if (int.TryParse(Console.ReadLine(), out var selectedMode))
-{
-    switch (selectedMode)
-    {
-        case 1:
-            break;
-        case 2:
-            isHardDifficulty = true;
-            break;
-        case 3:
-            isTwoPlayer = true;
-            break;
-        default:
-            Console.WriteLine("Invalid Input");
-            goto GameSetup;
-    }
-}
-else
+if (!int.TryParse(Console.ReadLine(), out var selectedMode))
 {
     Console.WriteLine("Invalid Input");
     goto GameSetup;
 }
 
+switch (selectedMode)
+{
+    case 1:
+        break;
+    case 2:
+        isHardDifficulty = true;
+        isPlayerOneTurn = false;
+        break;
+    case 3:
+        isTwoPlayer = true;
+        break;
+    default:
+        Console.WriteLine("Invalid Input");
+        goto GameSetup;
+}
+
 GameStart:
-var matchesToShow = Enumerable.Repeat('|', numberOfMatches).ToList();
-Console.WriteLine($"{string.Join(separator: "", values: matchesToShow)} ({numberOfMatches})");
+//var matchesToShow = Enumerable.Repeat('|', numberOfMatches).ToList();
+// Console.WriteLine($"{string.Join(separator: "", values: matchesToShow)} ({numberOfMatches})");
+Console.WriteLine($"{new string('|', numberOfMatches)} ({numberOfMatches})");
 if (isPlayerOneTurn || isTwoPlayer)
 {
     goto PlayerTurn;
@@ -47,10 +47,18 @@ if (isPlayerOneTurn || isTwoPlayer)
 
 AITurn:
 Console.WriteLine("AI's turn");
+if (numberOfMatches == 1)
+{
+    numberOfMatches--;
+    goto CheckVictory;
+}
 var aiDraw = 0;
+var maxDrawValue = numberOfMatches > 3 ? 4 : numberOfMatches;
+
 if (isHardDifficulty)
 {
-    for (var i = 1; i <= 3; i++)
+    /*
+    for (var i = 1; i < 4; i++)
     {
         if ((numberOfMatches - i) % 4 <= 1)
         {
@@ -58,10 +66,12 @@ if (isHardDifficulty)
             break;
         }
     }
+    */
+    aiDraw = 1 + Random.Shared.Next(1,maxDrawValue-1) % (numberOfMatches / 2);
 }
 else
 {
-    aiDraw = Random.Shared.Next(1, 4);
+    aiDraw = Random.Shared.Next(1, maxDrawValue);
 }
 
 if (aiDraw == 0)
