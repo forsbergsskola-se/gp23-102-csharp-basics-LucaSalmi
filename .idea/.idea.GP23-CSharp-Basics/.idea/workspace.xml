@@ -28,7 +28,7 @@
   <component name="ChangeListManager">
     <list default="true" id="55070d30-dcbc-4e34-bb01-3529df66110d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GP23-CSharp-Basics/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GP23-CSharp-Basics/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Battleship/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameOfNim/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameOfNim/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +88,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected=".NET Project.Battleship">
+  <component name="RunManager" selected=".NET Project.GameOfNim">
     <configuration name="Battleship" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -492,7 +492,8 @@
       <workItem from="1694496854097" duration="2466000" />
       <workItem from="1694501902324" duration="19070000" />
       <workItem from="1694674162023" duration="1630000" />
-      <workItem from="1694676749658" duration="17869000" />
+      <workItem from="1694676749658" duration="18492000" />
+      <workItem from="1695020786459" duration="1437000" />
     </task>
     <task id="LOCAL-00001" summary="updated P3 printing">
       <option name="closed" value="true" />

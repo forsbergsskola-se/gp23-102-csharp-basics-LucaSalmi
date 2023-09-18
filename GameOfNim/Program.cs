@@ -2,7 +2,7 @@
 
 var numberOfMatches = 24;
 var isPlayerOneTurn = true;
-bool isHardDifficulty = false;
+var isHardDifficulty = false;
 var isTwoPlayer = false;
 
 GameSetup:
@@ -89,7 +89,7 @@ Console.WriteLine(isTwoPlayer
     ? $"How many matches do {(isPlayerOneTurn ? "Player One" : "Player two")} want to draw?"
     : "How many matches do you want to draw?");
 
-if (!int.TryParse(Console.ReadLine(), out var playerDraw) || playerDraw > 3 || playerDraw < 0)
+if (!int.TryParse(Console.ReadLine(), out var playerDraw) || playerDraw > 3 || playerDraw <= 0 || playerDraw > numberOfMatches)
 {
     Console.WriteLine("Invalid Input");
     goto GameStart;
