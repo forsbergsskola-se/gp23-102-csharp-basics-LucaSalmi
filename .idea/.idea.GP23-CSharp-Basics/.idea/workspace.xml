@@ -26,7 +26,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55070d30-dcbc-4e34-bb01-3529df66110d" name="Changes" comment="">
+    <list default="true" id="55070d30-dcbc-4e34-bb01-3529df66110d" name="Changes" comment="code cleanup and small fixes">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GP23-CSharp-Basics/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GP23-CSharp-Basics/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameOfNim/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameOfNim/Program.cs" afterDir="false" />
     </list>
@@ -40,10 +40,12 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Battleship/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Forsberg Projects/forsbergsSkola/gp23-102-csharp-basics-LucaSalmi/GameOfNim/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GameOfNim/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/P13-GoTo/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/P9-Operators-Extra/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/P9-Operators/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6879c9ed20391a5ccfea363be5964fbcfe4f1dfde9558aa84b36df6b6ec92c6/List.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6bfb5caa34a165fe407ffb9d2b7285ffa682b2e3eb1f4f18fb6a945a576c4/Random.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b06a951fea5f439c1acd7528de1a63fdca0f02de6ed836149cab94e1f255c/Math.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -88,7 +90,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected=".NET Project.GameOfNim">
+  <component name="RunManager" selected=".NET Project.Battleship">
     <configuration name="Battleship" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -493,7 +495,7 @@
       <workItem from="1694501902324" duration="19070000" />
       <workItem from="1694674162023" duration="1630000" />
       <workItem from="1694676749658" duration="18492000" />
-      <workItem from="1695020786459" duration="1437000" />
+      <workItem from="1695020786459" duration="2870000" />
     </task>
     <task id="LOCAL-00001" summary="updated P3 printing">
       <option name="closed" value="true" />
@@ -519,7 +521,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694504530121</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="code cleanup and small fixes">
+      <option name="closed" value="true" />
+      <created>1695022547093</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695022547093</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -542,7 +552,8 @@
     <MESSAGE value="updated P3 printing" />
     <MESSAGE value="renamed P9Operators" />
     <MESSAGE value="updated P9 ifElse" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated P9 ifElse" />
+    <MESSAGE value="code cleanup and small fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="code cleanup and small fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

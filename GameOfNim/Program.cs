@@ -52,12 +52,12 @@ if (numberOfMatches == 1)
     numberOfMatches--;
     goto CheckVictory;
 }
+
 var aiDraw = 0;
 var maxDrawValue = numberOfMatches > 3 ? 4 : numberOfMatches;
 
-if (isHardDifficulty)
+if (isHardDifficulty && numberOfMatches > 4)
 {
-    /*
     for (var i = 1; i < 4; i++)
     {
         if ((numberOfMatches - i) % 4 <= 1)
@@ -66,8 +66,10 @@ if (isHardDifficulty)
             break;
         }
     }
-    */
-    aiDraw = 1 + Random.Shared.Next(1,maxDrawValue-1) % (numberOfMatches / 2);
+}
+else if (numberOfMatches < 4)
+{
+    aiDraw = numberOfMatches - 1;
 }
 else
 {
@@ -89,7 +91,8 @@ Console.WriteLine(isTwoPlayer
     ? $"How many matches do {(isPlayerOneTurn ? "Player One" : "Player two")} want to draw?"
     : "How many matches do you want to draw?");
 
-if (!int.TryParse(Console.ReadLine(), out var playerDraw) || playerDraw > 3 || playerDraw <= 0 || playerDraw > numberOfMatches)
+if (!int.TryParse(Console.ReadLine(), out var playerDraw) || playerDraw > 3 || playerDraw <= 0 ||
+    playerDraw > numberOfMatches)
 {
     Console.WriteLine("Invalid Input");
     goto GameStart;
