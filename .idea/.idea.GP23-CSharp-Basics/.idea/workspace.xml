@@ -26,10 +26,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55070d30-dcbc-4e34-bb01-3529df66110d" name="Changes" comment="code cleanup and small fixes">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GP23-CSharp-Basics/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GP23-CSharp-Basics/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameOfNim/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameOfNim/Program.cs" afterDir="false" />
-    </list>
+    <list default="true" id="55070d30-dcbc-4e34-bb01-3529df66110d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -495,7 +492,7 @@
       <workItem from="1694501902324" duration="19070000" />
       <workItem from="1694674162023" duration="1630000" />
       <workItem from="1694676749658" duration="18492000" />
-      <workItem from="1695020786459" duration="2870000" />
+      <workItem from="1695020786459" duration="3438000" />
     </task>
     <task id="LOCAL-00001" summary="updated P3 printing">
       <option name="closed" value="true" />
